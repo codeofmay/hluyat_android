@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_marginTop="12dp"
+    android:layout_marginBottom="12dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_height="wrap_content"
+    android:background="@color/greybg"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/lab_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        tools:text="Please select a donation to request"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/title"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        >
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_charitydonations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:background="@drawable/blue_btn"
+            >
+        <TextView
+            android:id="@+id/lab_add"
+            android:layout_width="110dp"
+            android:layout_height="140dp"
+            android:text="Add"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/blue"
+            android:background="?android:attr/selectableItemBackground"
+            />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_height="match_parent"
+    app:theme="@style/Theme.AppCompat.Light"
+    tools:context="com.project.mt.dc.donor.activity.ProfileSetupActivity">
+
+
+    <ImageView
+        android:id="@+id/img_donor"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        app:srcCompat="@drawable/ic_person_black_24dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/text_donorName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:theme="@style/Widget.App.EditText"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:hint="Name"
+                    android:inputType="textPersonName"
+                    />
+
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/text_donorPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:hint="Phone Number"
+                    app:theme="@style/Widget.App.EditText"
+                    android:inputType="phone"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_btn"
+            android:gravity="center"
+            android:layout_margin="32dp"
+            android:orientation="horizontal"
+            >
+
+            <me.myatminsoe.mdetect.MMTextView
+                android:id="@+id/btn_donorAddr"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                tools:text="@string/choose_address"
+                android:inputType="text"
+                android:padding="12dp"
+                android:textColorHint="@color/blue"
+                android:textColor="@color/title"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/text_size_secondarytitle" />
+
+            <ImageView
+                android:id="@+id/img_arrowdown"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_keyboard_arrow_down_blue_24dp" />
+        </LinearLayout>
+
+ </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/button_donorRegister"
+            android:layout_width="150dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/press_btn"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="48dp"
+            android:paddingRight="48dp">
+
+            <TextView
+                android:id="@+id/lab_donorRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="@string/ok"
+                android:padding="12dp"
+                android:textStyle="bold"
+                android:background="?android:attr/selectableItemBackground"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+

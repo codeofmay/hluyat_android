@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linear_charity"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/padding_large"
+        android:layout_marginBottom="@dimen/padding_large"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/img_donorimage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="top"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_person_black_24dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_large"
+            android:gravity="left|top"
+            android:orientation="vertical"
+            >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lab_donorname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:textColor="@color/title"
+                    android:textSize="@dimen/text_size_secondarytitle"
+                    android:paddingTop="6dp"
+                    android:textStyle="bold"
+                    tools:text="May Thin Khine" />
+
+                <TextView
+                    android:id="@+id/lab_donate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="donates"
+                    android:padding="6dp"
+                    android:layout_toRightOf="@id/lab_donorname"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/title"
+                    android:textSize="@dimen/text_size_secondarytitle" />
+
+                <ImageView
+                    android:id="@+id/img_options"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="6dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_keyboard_arrow_down_black_24dp"/>
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/lab_itemcategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/title"
+                    android:textSize="@dimen/text_size_secondarydescription"
+                    tools:text="Category"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/padding_small"
+                    android:textColor="@color/title"
+                    android:paddingRight="@dimen/padding_small"
+                    android:text=":"/>
+                <TextView
+                    android:id="@+id/lab_itemamount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/title"
+                    android:textSize="@dimen/text_size_secondarydescription"
+                    tools:text="Amount"/>
+            </LinearLayout>
+
+            <!--<android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_maindonationitems"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="8dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" />-->
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

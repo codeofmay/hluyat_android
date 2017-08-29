@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_marginRight="8dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+<ImageView
+    android:id="@+id/img_currentdonor"
+    android:layout_width="45dp"
+    android:layout_height="45dp"
+    android:scaleType="centerCrop"
+
+    android:src="@drawable/ic_person_black_24dp"
+    />
+    <TextView
+        android:id="@+id/lab_currentdonor"
+        android:layout_width="wrap_content"
+        tools:text="May Thin Khinee"
+        android:textSize="@dimen/text_size_primarydescription"
+        android:layout_marginTop="4dp"
+        android:maxLength="8"
+        android:textColor="@color/title"
+        android:layout_height="wrap_content" />
+</LinearLayout>

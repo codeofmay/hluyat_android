@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_marginTop="32dp"
+    android:layout_marginBottom="32dp"
+    android:layout_marginLeft="4dp"
+    android:layout_marginRight="4dp"
+    android:layout_height="wrap_content">
+<ImageView
+    android:id="@+id/img_donationImage"
+    android:layout_width="110dp"
+    android:layout_height="140dp"
+
+    android:scaleType="centerCrop"
+    android:src="@drawable/img"/>
+    <View
+        android:layout_width="110dp"
+        android:layout_height="140dp"
+        android:background="@drawable/img_gradient_drawable"/>
+
+    <LinearLayout
+        android:layout_width="110dp"
+        android:layout_height="140dp"
+        android:gravity="center"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/lab_requestplace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingLeft="2dp"
+            android:gravity="center"
+            android:paddingRight="2dp"
+            android:layout_gravity="center"
+            android:paddingBottom="4dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_primarydescription"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            tools:text="Mountain lkdjf ljlkjkl "
+            />
+        <TextView
+            android:id="@+id/lab_requestdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_primarydescription"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            tools:text="27 July"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,37 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">8dp</dimen>
+    <dimen name="activity_vertical_margin">8dp</dimen>
+    <dimen name="content_vertical_space">8dp</dimen>
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+
+
+
+    //im
+
+    <dimen name="text_size_title">16sp</dimen>
+    <dimen name="text_size_secondarytitle">14sp</dimen>
+    <dimen name="text_size_primarydescription">12.5sp</dimen>
+    <dimen name="text_size_secondarydescription">12sp</dimen>
+    <dimen name="text_size_primary_big">20sp</dimen>
+    <dimen name="text_size_primary_huge">26sp</dimen>
+    <dimen name="text_size_show">18sp</dimen>
+
+    <dimen name="padding_tiny">2dp</dimen>
+    <dimen name="padding_small">4dp</dimen>
+    <dimen name="padding_medium">8dp</dimen>
+    <dimen name="padding_large">12dp</dimen>
+    <dimen name="padding_huge">16dp</dimen>
+
+    <dimen name="simple_padding_large">16dp</dimen>
+    <dimen name="simple_padding_larger">32dp</dimen>
+    <dimen name="simple_padding_huge">56dp</dimen>
+
+    <dimen name="toolbar_progress_size">24dp</dimen>
+    <dimen name="standard_padding">7dp</dimen>
+
+
+</resources>

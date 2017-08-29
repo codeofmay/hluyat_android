@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingTop="16dp"
+    android:paddingBottom="8dp"
+    android:gravity="center|center_vertical"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:paddingTop="24dp"
+        android:paddingBottom="12dp"
+        android:orientation="vertical">
+    <ImageView
+        android:id="@+id/img_charityimage"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:srcCompat="@drawable/ic_person_black_24dp" />
+
+    <TextView
+        android:layout_marginTop="16dp"
+        android:id="@+id/lab_charityname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/title"
+        android:textSize="@dimen/text_size_title"
+        tools:text="May Thin Khine"
+        />
+
+    <TextView
+        android:id="@+id/lab_viewprofile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Profile"
+        android:textAllCaps="true"
+        android:textColor="@color/blue"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+         />
+    </LinearLayout>
+</LinearLayout>

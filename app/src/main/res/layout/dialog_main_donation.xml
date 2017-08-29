@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:orientation="vertical">
+<ImageView
+    android:id="@+id/img_donorimage"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:layout_marginBottom="16dp"
+    android:src="@drawable/ic_person_black_24dp"/>
+    <TextView
+        android:id="@+id/lab_donorname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/title"
+        android:textSize="@dimen/text_size_title"
+        tools:text="May Thin Khine"/>
+    <TextView
+        android:id="@+id/lab_donortownship"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_secondarytitle"
+        android:paddingTop="12dp"
+        android:textColor="@color/title"
+        tools:text="Mayangone"/>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:paddingTop="12dp"
+      android:orientation="horizontal">
+      <TextView
+          android:id="@+id/lab_itemcategory"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="@dimen/text_size_secondarytitle"
+          android:textColor="@color/title"
+          tools:text="Stationary dsfjkdhjk jhsdjkfhjsdhh dsfhj"/>
+      <TextView
+
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="@dimen/text_size_secondarytitle"
+          android:textColor="@color/title"
+          android:layout_marginLeft="2dp"
+          android:layout_marginRight="2dp"
+          android:text=":"/>
+      <TextView
+          android:id="@+id/lab_itemamount"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="@dimen/text_size_secondarytitle"
+          android:ellipsize="end"
+          android:maxLines="1"
+          android:textColor="@color/title"
+          tools:text="100"/>
+  </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_options"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:weightSum="3"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_edit"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_edit_black_24dp"
+            />
+
+        <ImageView
+            android:id="@+id/img_delete"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_delete_black_24dp"/>
+        <ImageView
+            android:id="@+id/img_call"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_call_black_24dp"/>
+
+    </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

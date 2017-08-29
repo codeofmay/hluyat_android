@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="mdetect-android-3.0">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/93d45ef3df1b9e6d792a02a4b2a374a5d338c624/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/93d45ef3df1b9e6d792a02a4b2a374a5d338c624/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/AndroidNew/gradle-3.3/caches/modules-2/files-2.1/myatminsoe.mdetect.android/mdetect-android/3.0/587a099b420b1afc32d03356174926dd4760fd67/mdetect-android-3.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
