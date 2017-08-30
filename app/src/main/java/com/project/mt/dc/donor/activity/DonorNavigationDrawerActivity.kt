@@ -18,7 +18,7 @@ import com.facebook.login.LoginManager
 import com.google.firebase.auth.FirebaseAuth
 import com.project.mt.dc.R
 import com.project.mt.dc.R.id.*
-import com.project.mt.dc.donor.fragment.AboutFragment
+import com.project.mt.dc.AboutFragment
 import com.project.mt.dc.donor.fragment.FeedFragment
 import com.project.mt.dc.donor.fragment.HomeFragment
 import com.project.mt.dc.event.Event
@@ -224,7 +224,7 @@ class DonorNavigationDrawerActivity : AppCompatActivity(), NavigationView.OnNavi
             finish()
         }
         if(id== nav_aboutUs){
-           // supportFragmentManager.beginTransaction().replace(R.id.donor_container,aboutFragment).commit()
+            supportFragmentManager.beginTransaction().replace(R.id.donor_container,aboutFragment).commit()
         }
 
         val drawer = findViewById(drawer_layout) as DrawerLayout

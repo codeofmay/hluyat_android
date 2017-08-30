@@ -69,9 +69,6 @@ class LoginActivity : Activity() {
 
                             try {
                                 throw task.exception!!!!
-                            } catch (e: FirebaseAuthWeakPasswordException) {
-                                txt_charityPassword!!.error = "Please Enter Strong Password"
-                                txt_charityPassword!!.requestFocus()
                             } catch (e: FirebaseAuthInvalidCredentialsException) {
                                 txt_charityEmail!!.error = "The Email or Password is invalid"
                                 txt_charityPassword!!.error="The Email or Password is invalid"

@@ -212,21 +212,18 @@ class RecyclerDonateFeedAdapter(itemList: ArrayList<ItemInfoModel>, activity: Ac
         }
 
         fun showDonatingStatusDialog() {
-            val dialog = android.support.v7.app.AlertDialog.Builder(activity!!, R.style.ThemeDialog)
+            val dialog = android.support.v7.app.AlertDialog.Builder(activity!!, R.style.MyDialogTheme)
                     .setTitle("Item Information")
                     .setMessage(status_donating)
-                    .setIcon(android.R.drawable.ic_dialog_info)
+                    .setIcon(R.drawable.ic_info_black_24dp)
                     .setNegativeButton("OK", {
                         _, _ ->
                     }).show()
 
             val message = dialog.findViewById(android.R.id.message) as TextView
-            message.setTextColor(Color.parseColor("#ffffff"))
             message.gravity = Gravity.CENTER
-            message.setPadding(4, 4, 4, 4)
+            message.setPadding(0,32,0,0)
 
-            val negativeBtn = dialog.findViewById(android.R.id.button2) as Button
-            negativeBtn.setTextColor(Color.parseColor("#ffeb3b"))
         }
 
         fun showAcceptedStatusDialog() {
@@ -251,10 +248,10 @@ class RecyclerDonateFeedAdapter(itemList: ArrayList<ItemInfoModel>, activity: Ac
                                 } else {
                                     requestName = Rabbit.uni2zg( requestModel.request_place)
                                 }
-                                val dialog = android.support.v7.app.AlertDialog.Builder(activity!!, R.style.ThemeDialog)
+                                val dialog = android.support.v7.app.AlertDialog.Builder(activity!!, R.style.MyDialogTheme)
                                         .setTitle("Item Information")
                                         .setMessage(requestName + status_accepted)
-                                        .setIcon(android.R.drawable.ic_dialog_info)
+                                        .setIcon(R.drawable.ic_info_black_24dp)
                                         .setPositiveButton("VIEW", DialogInterface.OnClickListener { dialog, which ->
                                             val i = Intent(activity, MainDonationActivity::class.java)
                                             i.putExtra("donationmodel", requestModel)
@@ -267,18 +264,11 @@ class RecyclerDonateFeedAdapter(itemList: ArrayList<ItemInfoModel>, activity: Ac
                                         })
                                         .show()
 
-
                                 val message = dialog.findViewById(android.R.id.message) as TextView
-                                message.setTextColor(Color.parseColor("#ffffff"))
                                 message.gravity = Gravity.CENTER
-                                message.setPadding(4, 4, 4, 4)
 
 
-                                val positiveBtn = dialog.findViewById(android.R.id.button1) as Button
-                                positiveBtn.setTextColor(Color.parseColor("#ffeb3b"))
 
-                                val negativeBtn = dialog.findViewById(android.R.id.button2) as Button
-                                negativeBtn.setTextColor(Color.parseColor("#ffeb3b"))
                             }
                         }
 

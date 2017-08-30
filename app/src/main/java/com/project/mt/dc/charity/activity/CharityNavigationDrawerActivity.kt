@@ -20,6 +20,7 @@ import com.project.mt.dc.R.id.*
 import com.project.mt.dc.R.layout.activity_charity_navigation_drawer
 import com.project.mt.dc.charity.fragment.HomeFragment
 import com.project.mt.dc.donor.activity.LoginActivity
+import com.project.mt.dc.AboutFragment
 import com.project.mt.dc.event.Event
 import com.project.mt.dc.event.Event.StringEvent
 import com.project.mt.dc.service.FirebaseReadService
@@ -41,6 +42,7 @@ class CharityNavigationDrawerActivity : AppCompatActivity(), NavigationView.OnNa
     lateinit var img_charityImage: ImageView
     lateinit var fontUtil:FontUtil
     lateinit var homeFragment:HomeFragment
+    lateinit var aboutFragment: AboutFragment
     var oldNotiCount:Int?=null
     var notiDifferent:Int?= null
     var icon:LayerDrawable?= null
@@ -76,6 +78,7 @@ class CharityNavigationDrawerActivity : AppCompatActivity(), NavigationView.OnNa
         fontFlag=MDetect.isUnicode()
 
         homeFragment= HomeFragment()
+        aboutFragment= AboutFragment()
 
         val drawer = findViewById(drawer_layout) as DrawerLayout
         val toggle = ActionBarDrawerToggle(
@@ -195,7 +198,8 @@ class CharityNavigationDrawerActivity : AppCompatActivity(), NavigationView.OnNa
 
         if (id == nav_charityhome) {
             supportFragmentManager.beginTransaction().replace(R.id.charity_container,homeFragment).commit()
-        } else if (id == nav_topdonor) {
+        } else if (id == nav_aboutUs) {
+            supportFragmentManager.beginTransaction().replace(R.id.charity_container,aboutFragment).commit()
 
         } else if (id == nav_logout) {
 

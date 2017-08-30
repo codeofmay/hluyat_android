@@ -5,225 +5,64 @@
 <LinearLayout
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:layout_height="match_parent"
-    android:layout_marginLeft="24dp"
-    android:layout_marginRight="24dp"
-    tools:context="com.project.mt.dc.donor.fragment.AboutFragment">
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_gravity="center"
+    tools:context="com.project.mt.dc.AboutFragment">
 
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/img"
+        android:scaleType="centerCrop"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:text="Version: 1.1.0"
+        android:textSize="@dimen/text_size_title"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"
+        android:textColor="@color/black"/>
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:scaleType="centerCrop"
-            app:srcCompat="@drawable/img" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="8dp"
-            android:text="Hlu Yat"
-            android:textColor="@color/black"
-            android:textSize="@dimen/text_size_title"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="moto"
-            android:textColor="@color/black"
-            android:textSize="@dimen/text_size_primarydescription" />
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="12dp"
         android:gravity="center"
-        android:orientation="vertical">
+        android:textSize="@dimen/text_size_secondarytitle"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:padding="16dp"
+        android:text="A Small Donation Community to connect donors and charities."
+        android:textColor="@color/black"/>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_margin="8dp"
-            android:orientation="horizontal">
-
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_marginRight="12dp"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:scaleType="centerCrop"
-                    android:layout_centerInParent="true"
-                    app:srcCompat="@drawable/ic_add_black_24dp" />
-            </RelativeLayout>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Donate"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_size_title"
-                android:textStyle="bold" />
-        </LinearLayout>
-
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_height="wrap_content">
         <TextView
-            android:id="@+id/lab_about_donate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:text="@string/donor_about_donate"
-            android:textColor="@color/title_grey"
-            android:lineSpacingExtra="3dp"
-            android:gravity="center"
-            android:textSize="@dimen/text_size_secondarydescription" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="12dp"
-        android:gravity="center"
-        android:orientation="vertical">
-        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:layout_margin="8dp"
-            android:orientation="horizontal">
+            android:padding="16dp"
+            android:text="Terms And Agreement"
+            android:textColor="@color/blue"/>
+    </android.support.v7.widget.CardView>
 
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_marginRight="12dp"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:scaleType="centerCrop"
-                    android:layout_centerInParent="true"
-                    app:srcCompat="@drawable/ic_search_black_24dp"
-                    />
-            </RelativeLayout>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Search"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_size_title"
-                android:textStyle="bold" />
-        </LinearLayout>
-
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_licenses"
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_height="wrap_content">
         <TextView
-            android:id="@+id/lab_about_search"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:text="@string/donor_about_search"
-            android:textColor="@color/title_grey"
-            android:lineSpacingExtra="3dp"
-            android:gravity="center"
-            android:textSize="@dimen/text_size_secondarydescription" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="12dp"
-        android:gravity="center"
-        android:orientation="vertical">
-
-        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:layout_margin="8dp"
-            android:orientation="horizontal">
-
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_marginRight="12dp"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:scaleType="centerCrop"
-                    android:layout_centerInParent="true"
-                    app:srcCompat="@drawable/ic_notifications_black_24dp" />
-            </RelativeLayout>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Notification"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_size_title"
-                android:textStyle="bold" />
-        </LinearLayout>
-        <TextView
-            android:id="@+id/lab_about_noti"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:text="@string/donor_about_noti"
-            android:textColor="@color/title_grey"
-            android:lineSpacingExtra="3dp"
-            android:gravity="center"
-            android:textSize="@dimen/text_size_secondarydescription" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="12dp"
-        android:gravity="center"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_margin="8dp"
-            android:orientation="horizontal">
-
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_marginRight="12dp"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:scaleType="centerCrop"
-                    android:layout_centerInParent="true"
-                    app:srcCompat="@drawable/ic_check_black_24dp" />
-            </RelativeLayout>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="When Donation Finish"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_size_title"
-                android:textStyle="bold" />
-        </LinearLayout>
-        <TextView
-            android:id="@+id/lab_about_finish"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:text="@string/donor_about_finish"
-            android:textColor="@color/title_grey"
-            android:lineSpacingExtra="3dp"
-            android:gravity="center"
-            android:textSize="@dimen/text_size_secondarydescription" />
-    </LinearLayout>
+            android:padding="16dp"
+            android:text="Open Source Licenses"
+            android:textColor="@color/blue"/>
+    </android.support.v7.widget.CardView>
 </LinearLayout>
 </ScrollView>

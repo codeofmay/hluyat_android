@@ -29,16 +29,16 @@ class RecyclerCharityListAdapter(charityList: ArrayList<CharityModel>, activity:
 
     var charityList = ArrayList<CharityModel>()
     var activity: AppCompatActivity? = null
-    val requestReference= FirebaseDatabase.getInstance().getReference("request_post")
-    var fontUtil:FontUtil?= null
-    var fontFlag:Boolean?=null
+    val requestReference = FirebaseDatabase.getInstance().getReference("request_post")
+    var fontUtil: FontUtil? = null
+    var fontFlag: Boolean? = null
 
     init {
         this.charityList = charityList
         this.activity = activity
-        fontUtil= FontUtil(activity)
+        fontUtil = FontUtil(activity)
         MDetect.init(activity)
-        fontFlag=MDetect.isUnicode()
+        fontFlag = MDetect.isUnicode()
 
     }
 
@@ -56,20 +56,20 @@ class RecyclerCharityListAdapter(charityList: ArrayList<CharityModel>, activity:
 
         val charityModel = charityList!![position]
 
-        if(fontFlag!!) {
+
+        if (fontFlag!!) {
             (holder)!!.charityName.text = charityModel.charity_name
-        }
-        else{
+        } else {
             (holder)!!.charityName.text = Rabbit.uni2zg(charityModel.charity_name)
         }
-        holder.charityYear.text = "Since "+charityModel.charity_year
+        holder.charityYear.text = "Since " + charityModel.charity_year
         Glide.with(activity).
                 load(charityModel.charity_image).
                 placeholder(R.drawable.ic_person_black_24dp).
                 bitmapTransform(CropCircleTransformation(activity))
                 .into((holder).charityImage)
 
-        var count=0
+        var count = 0
         requestReference.child(charityModel.charity_id)
                 .addValueEventListener(object : ValueEventListener {
                     override fun onCancelled(p0: DatabaseError?) {
@@ -78,17 +78,18 @@ class RecyclerCharityListAdapter(charityList: ArrayList<CharityModel>, activity:
 
                     override fun onDataChange(requestSnapShot: DataSnapshot?) {
                         if (requestSnapShot != null) {
-                            for (rSnapshot:DataSnapshot in requestSnapShot.children) {
+                            for (rSnapshot: DataSnapshot in requestSnapShot.children) {
                                 if (rSnapshot.child("request_status").value.toString() == "requesting") {
                                     count++
                                 }
                             }
-                            holder.requestCount.text= count.toString()
+                            holder.requestCount.text = count.toString()
 
                         }
                     }
 
                 })
+
 
     }
 
@@ -108,27 +109,36 @@ class RecyclerCharityListAdapter(charityList: ArrayList<CharityModel>, activity:
             charityName = itemView.findViewById(R.id.lab_charityname) as TextView
             charityYear = itemView.findViewById(R.id.lab_charityyear) as TextView
             charityImage = itemView.findViewById(R.id.img_charityimage) as ImageView
-            requestCount=itemView.findViewById(R.id.lab_requestcount)as TextView
+            requestCount = itemView.findViewById(R.id.lab_requestcount) as TextView
 
-            charityName.typeface= fontUtil!!.title_font
-            charityYear.typeface= fontUtil!!.light_font
-            requestCount.typeface= fontUtil!!.title_font
+            charityName.typeface = fontUtil!!.title_font
+            charityYear.typeface = fontUtil!!.light_font
+            requestCount.typeface = fontUtil!!.title_font
 
             itemView.setOnClickListener({
-                val charityModel=charityList[position]
-                val i= Intent(activity,CharityUpcomingDonationActivity::class.java)
-                i.putExtra("charitymodel",charityModel)
+                val charityModel = charityList[position]
+                val i = Intent(activity, CharityUpcomingDonationActivity::class.java)
+                i.putExtra("charitymodel", charityModel)
                 activity!!.startActivity(i)
 
             })
 
             charityName.setOnClickListener({
-                val charityModel=charityList[position]
-                val i= Intent(activity,CharityProfileActivity::class.java)
-                i.putExtra("caller","visitor")
-                i.putExtra("id",charityModel.charity_id)
+                val charityModel = charityList[position]
+                val i = Intent(activity, CharityProfileActivity::class.java)
+                i.putExtra("caller", "visitor")
+                i.putExtra("id", charityModel.charity_id)
                 activity!!.startActivity(i)
             })
+
+            charityImage.setOnClickListener({
+                val charityModel = charityList[position]
+                val i = Intent(activity, CharityProfileActivity::class.java)
+                i.putExtra("caller", "visitor")
+                i.putExtra("id", charityModel.charity_id)
+                activity!!.startActivity(i)
+            })
+
 
         }
 

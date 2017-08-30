@@ -55,7 +55,7 @@ class ShowCategoryDialogService {
 
                 val categoryArray = categoryList!!.toArray(arrayOfNulls<String>(categoryList!!.size))
 
-                val categoryDialog=android.support.v7.app.AlertDialog.Builder(context!!,R.style.MyDialogTheme)
+                val categoryDialog=android.support.v7.app.AlertDialog.Builder(context!!,R.style.ListDialogTheme)
                         .setTitle("Categories")
 
                 categoryDialog.setItems(categoryArray, object : DialogInterface.OnClickListener {

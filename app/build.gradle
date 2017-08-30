@@ -69,7 +69,6 @@ dependencies {
     compile 'com.google.firebase:firebase-messaging:10.2.6'
     compile 'myatminsoe.mdetect.android:mdetect-android:3.0'
     compile 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
-    compile 'com.squareup:pollexor:2.0.4'
     compile 'com.mikhaellopez:circularimageview:3.0.2'
     compile 'com.googlecode.libphonenumber:libphonenumber:8.2.0'
     testCompile 'junit:junit:4.12'

@@ -45,6 +45,77 @@
     <string name="donor_post_category_error">ကဏ္ဍရွေးပေးပါ</string>
     <string name="donor_post_amount_error">အလှူပစ္စည်း ပမာဏ(သို့)\n အသေးစိတ်အချက်အလက်ဖြည့်စွက်ပေးပါ</string>
     <string name="donor_post_address_error">ဆက်သွယ်ရန်လိပ်စာအား ဖြည့်စွက်ပေးပါ</string>
+    <string name="donor_post_image_errror">သင့်အလှူပစ္စည်း၏ ဓာတ်ပုံကိုဖြည့်စွက်ပေးပါ</string>
+
+    <string name="charity_noti1">သည်</string>
+    <string name="charity_noti2">အတွက် ပါ၀င်လှူဒါန်းပါမည််</string>
+
+    <string name="charity_done_title">လှူဒါန်းပြီးပါပြီ</string>
+    <string name="charity_done_place">လှူဒါန်းခဲ့သည့်နေရာ</string>
+    <string name="charity_done_description">လှူဒါန်းခဲ့သည့်အကြောင်းအပြည့်အစုံ</string>
+    <string name="charity_done_place_error">သွားရောက်လှူဒါန်းခဲ့သည့်နေရာအားဖြည့်စွက်ပေးပါ</string>
+    <string name="charity_done_location_error">သွားရောက်လှူဒါန်းခဲ့သည့် တည်နေရာကိုဖြည့်စွက်ပေးပါ</string>
+    <string name="charity_done_description_error">သွားရောက်လှူဒါန်းခဲ့သည့် အကြောင်းအရာအားဖြည့်စွက်ပေးပါ</string>
+    <string name="charity_done_photo_error">သွားရောက်လှူဒါန်းခဲ့သည့် ဓာတ်ပုံအား ဖြည့်စွက်ပေးပါ</string>
+
+    <string name="charity_done_date">လှူဒါန်းခဲ့သည့်နေ့ရက်</string>
+    <string name="charity_done_date_error">လှူဒါန်းခဲ့သည့်နေ့ရက်အားဖြည့်စွက်ပေးပါ</string>
+
+    <string name="profile_ph">ဖုန်းနံပါတ်</string>
+    <string name="profile_addr">လိပ်စာ</string>
+
+    <string name="todonate">လှူရန်</string>
+    <string name="donated">လှူပြီး</string>
+    <string name="donor_donateinfo">သင်လှူဒါန်းထားသောပစ္စည်းကို ပရဟိတအဖွဲ့များမှ တွေ့မြင်နိုင်ပြီး requestပြုလုပ်နိုင်ပါသည်။</string>
+
+    <string name="donor_noti_donated">သို့ လှူဒါန်းပြီးပါပြီ</string>
+    <string name="donor_noti_request">သင့်အလှူပစ္စည်းအား requestပြုလုပ်ထားပါသည်</string>
+    <string name="item_status_donating">လှူဒါန်းထားဆဲဖြစ်ပါသည်</string>
+    <string name="item_status_accepted">သို့လှူဒါန်းရန် လက်ခံပြီးဖြစ်ပါသည်</string>
+    <string name="choose_address">လိပ်စာရွေးပါ</string>
+    <string name="ok">ရပြီ</string>
+    <string name="name">နာမည်</string>
+    <string name="choose_city">တည်နေရာရွေးပါ</string>
+
+    <string name="charity_nodonated">There is no donated places</string>
+    <string name="donor_nodonating">There is no donating items</string>
+    <string name="donor_nodonated">There is no donated items</string>
+    <string name="this_item">ဤပစ္စည်းကိိုု </string>
+    <string name="please_remove"> သို့လှူဒါန်းရန် လက်ခံပြီးဖြစ်ပါသည်။ လှူဒါန်းမှုကိုအရင် remove လုပ်ပေးပါ</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="title_activity_t">tActivity</string>
+    <string name="donor_search">လှူဒါန်းရန်ရှာဖွေမည်</string>
+    <string name="your_donating_item">သင်လှူဒါန်းထားသောပစ္စည်းများ</string>
+    <string name="donor_about_donate">သင်တတ်နိုင်သလောက်သာ လှူဒါန်းပါ။
+သင်လှူဒါန်းထားသောပစ္စည်းများကို ပရဟိတအဖွဲ့များမှတွေ့မြင်ပြီး reqeustပြူလုပ်နိုင်ပါသည်။</string>
+    <string name="donor_about_noti">ပရဟိတအဖွဲ့များမှ requestလုပ်လျှင် notificaitionရရှိမည်။
+noti ကို accept လုပ်လျှင် သင့်အား ဖုန်းခေါဆိုနိုင်ပါသည်။
+သင်အဆင်ပြေသောနေရာကိုချိန်းဆိုပြီး ပစည်းကိုသွားရောက်ပေးပို့လှူဒါန်းနိုင်ပါသည်။</string>
+    <string name="donor_about_search">လှူရပ် application တွင်register ပြုလုပ်ထားသော ပရဟိတအဖွဲ့များ
+င်းတို့သွားရောက်လှူဒါန်းမည့် နေရာများကိုရှာဖွေနိုင်ပြီး သင်လည်းဝင်ရောက်လှူဒါန်းနိုင်ပါသည်။</string>
+    <string name="donor_about_finish">ပရဟိတအဖွဲ့များက သွားရောက်လှူဒါန်းပြီးလျှင် သင့်ထံ notification ရောက်ရှိပြီး လှူဒါန်းခဲ့သောအကြောင်းအရာများကိုတွေ့မြင်နိုင်ပါသည်။</string>
+
+<!--
+    <string name="charity_search">အလှူရှင်ရှာဖွေမည်</string>
+    <string name="charity_post">အလှူတစ်ခုပြုလုပ်မည်</string>
+    <string name="searchView">အသေးစိတ်ရှာဖွေမည်</string>
+    <string name="charity_post_place">တည်နေရာ</string>
+    <string name="charity_post_name">လှူဒါန်းမည့်နေရာ</string>
+    <string name="charity_post_description">လှူဒါန်းမည့် အကြောင်းအရာ</string>
+    <string name="charity_post_date">လှူဒါန်းမည့် နေ့ရက်</string>
+    <string name="charity_post_place_error">သွားရောက်လှူဒါန်းမည့်နေရာကိုဖြည့်စွက်ပေးပါ</string>
+    <string name="charity_post_location_error">သွားရောက်လှူဒါန်းမည့် တည်နေရာကိုဖြည့်စွက်ပေးပါ</string>
+    <string name="charity_post_photo_error">သွားရောက်လှူဒါန်းမည့်နေရာ၏ ဓာတ်ပုံကိုဖြည့်စွက်ပေးပါ</string>
+    <string name="charity_post_description_error">သွားရောက်လှူဒါန်းမည့်အကြောင်းအရာကိုဖြည့်စွက်ပေးပါ</string>
+    <string name="charity_post_date_error">သွားရောက်လှူဒါန်းမည့် နေ့ရက်ကိုဖြည့်စွက်ပေးပါ</string>
+    <string name="post_phone_error">ဆက်သွယ်ရန် ဖုန်းနံပါတ်အားဖြည့်စွက်ပေးပါ</string>
+
+    <string name="donor_post">လှူဒါန်းမည်</string>
+    <string name="donor_post_category">ကဏ္ဍရွေးပါ</string>
+    <string name="donor_post_amount">အလှူပစ္စည်း ပမာဏ(သို့)အသေးစိတ်အချက်အလက်ဖြည့်စွက်ပေးပါ</string>
+    <string name="donor_post_category_error">ကဏ္ဍရွေးပေးပါ</string>
+    <string name="donor_post_amount_error">အလှူပစ္စည်း ပမာဏ(သို့)\n အသေးစိတ်အချက်အလက်ဖြည့်စွက်ပေးပါ</string>
+    <string name="donor_post_address_error">ဆက်သွယ်ရန်လိပ်စာအား ဖြည့်စွက်ပေးပါ</string>
     <string name="donor_post_image_errror">သင့်အလှူပစည်း၏ ဓာတ်ပုံကိုဖြည့်စွက်ပေးပါ</string>
 
     <string name="charity_noti1">သည်</string>
@@ -94,5 +165,6 @@ noti ကို accept လုပ်လျှင် သင့်အား ဖု�
     <string name="donor_about_search">လှူရပ် application တွင်register ပြုလုပ်ထားသော ပရဟိတအဖွဲ့များ
 င်းတို့သွားရောက်လှူဒါန်းမည့် နေရာများကိုရှာဖွေနိုင်ပြီး သင်လည်းဝင်ရောက်လှူဒါန်းနိုင်ပါသည်။</string>
     <string name="donor_about_finish">ပရဟိတအဖွဲ့များက သွားရောက်လှူဒါန်းပြီးလျှင် သင့်ထံ notification ရောက်ရှိပြီး လှူဒါန်းခဲ့သောအကြောင်းအရာများကိုတွေ့မြင်နိုင်ပါသည်။</string>
+-->
 
 </resources>

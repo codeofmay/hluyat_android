@@ -86,7 +86,7 @@ class ShowAddressDialogService {
 
     fun setCityDialog() {
 
-        val cityDialog=android.support.v7.app.AlertDialog.Builder(context!!, R.style.MyDialogTheme)
+        val cityDialog=android.support.v7.app.AlertDialog.Builder(context!!, R.style.ListDialogTheme)
                 .setTitle("Citites")
         cityDialog.setItems(cityArray, object : DialogInterface.OnClickListener {
             override fun onClick(dialog: DialogInterface?, which: Int) {
@@ -129,7 +129,7 @@ class ShowAddressDialogService {
         }
 
         val townshipArray = filteredTownshipList.toArray(arrayOfNulls<String>(filteredTownshipList.size))
-        val townshipDialog=android.support.v7.app.AlertDialog.Builder(context!!,R.style.MyDialogTheme)
+        val townshipDialog=android.support.v7.app.AlertDialog.Builder(context!!,R.style.ListDialogTheme)
                 .setTitle("Townships")
 
         townshipDialog.setItems(townshipArray, object : DialogInterface.OnClickListener {

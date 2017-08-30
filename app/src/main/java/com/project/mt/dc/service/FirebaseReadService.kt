@@ -262,9 +262,11 @@ class FirebaseReadService : FirebaseService() {
                 charityList.clear()
                 if (charitySnapshot != null) {
                     for (cSnapshot: DataSnapshot in charitySnapshot.children) {
-                        var charityModel = cSnapshot.getValue(CharityModel::class.java)
-                        charityModel.charity_id = cSnapshot.key.toString()
-                        charityList.add(charityModel)
+                        if (cSnapshot.child("charity_name").exists()) {
+                            var charityModel = cSnapshot.getValue(CharityModel::class.java)
+                            charityModel.charity_id = cSnapshot.key.toString()
+                            charityList.add(charityModel)
+                        }
                     }
                     EventBus.getDefault().post(ListEvent("charitylist", charityList))
                 }
