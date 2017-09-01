@@ -11,9 +11,8 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
+import android.view.View
+import android.widget.*
 import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
@@ -49,6 +48,9 @@ class RequestFormActivity : AppCompatActivity() {
     lateinit var string_dateError:String
     lateinit var string_descriptionError:String
     lateinit var string_date:String
+
+    lateinit var relative_upload: RelativeLayout
+    lateinit var linear_upload: LinearLayout
 
     var fontFlag:Boolean?= null
 
@@ -98,6 +100,8 @@ class RequestFormActivity : AppCompatActivity() {
         supportActionBar!!.setDisplayShowHomeEnabled(true)
         supportActionBar!!.setHomeAsUpIndicator(R.drawable.ic_close_black_24dp)
 
+        relative_upload=findViewById(R.id.relative_upload)as RelativeLayout
+        linear_upload=findViewById(R.id.linear_upload)as LinearLayout
         txt_requestDate = findViewById(R.id.lab_requestdatepick) as MMTextView
         txt_requestLocation=findViewById(R.id.lab_requestlocation)as MMEditText
         txt_requestPlace = findViewById(R.id.txt_requestplace) as MMEditText
@@ -120,6 +124,7 @@ class RequestFormActivity : AppCompatActivity() {
         txt_requestDate.text=string_date
         caller = intent.getStringExtra("caller")
         if (caller == "edit") {
+            linear_upload.visibility=View.GONE
             requestModel = intent.getSerializableExtra("requestmodel") as RequestModel
             if(fontFlag!!) {
 
@@ -159,6 +164,11 @@ class RequestFormActivity : AppCompatActivity() {
 
         })
 
+        relative_upload.setOnClickListener({
+            val i = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+            startActivityForResult(i, 777)
+        })
+
         FirebaseReadService().getCharity(currentUser)
 
     }
@@ -177,6 +187,7 @@ class RequestFormActivity : AppCompatActivity() {
             try {
 
                 myImageBitmap = MediaStore.Images.Media.getBitmap(this.contentResolver, mySelectedImage)
+                linear_upload.visibility= View.GONE
                 Glide.with(this).load(MethodUtil().bitmapToByte((myImageBitmap)!!))
                         .asBitmap()
                         .centerCrop().into(img_requestImage)

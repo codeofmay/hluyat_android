@@ -15,10 +15,8 @@ import android.support.v7.widget.Toolbar
 import android.util.Log
 import android.view.Gravity
 import android.view.Menu
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
+import android.view.View
+import android.widget.*
 import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
@@ -63,6 +61,9 @@ class DonateFormActivity : AppCompatActivity() {
     lateinit var category_hint:String
     lateinit var progressDialog:ProgressDialog
     var methodUtil=MethodUtil()
+
+    lateinit var relative_upload:RelativeLayout
+    lateinit var linear_upload:LinearLayout
 
 
     fun onClickDonate() {
@@ -149,6 +150,8 @@ class DonateFormActivity : AppCompatActivity() {
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.setHomeAsUpIndicator(R.drawable.ic_close_black_24dp)
 
+        relative_upload=findViewById(R.id.relative_upload)as RelativeLayout
+        linear_upload=findViewById(R.id.linear_upload)as LinearLayout
         btn_itemCategory = findViewById(R.id.btn_itemcategory) as MMTextView
         lab_itemAmount = findViewById(R.id.lab_itemamount) as MMEditText
         img_itemImage = findViewById(R.id.img_itemimage) as ImageView
@@ -203,6 +206,11 @@ class DonateFormActivity : AppCompatActivity() {
             startActivityForResult(i, 999)
         })
 
+        relative_upload!!.setOnClickListener({
+            val i = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+            startActivityForResult(i, 999)
+        })
+
         FirebaseReadService().getDonor(user!!)
 
     }
@@ -242,9 +250,11 @@ class DonateFormActivity : AppCompatActivity() {
 
             try {
                 myBitmap = getBitmap(this.contentResolver, mySelectImage)
+                linear_upload.visibility=View.GONE
                 Glide.with(this).load(methodUtil.bitmapToByte((myBitmap)!!))
                         .asBitmap()
                         .centerCrop().into(img_itemImage)
+
             } catch (e: Exception) {
             }
         }

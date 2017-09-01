@@ -4,7 +4,7 @@ apply plugin: 'io.fabric'
 
 def majorVersion = 1
 def minorVersion = 1
-def patchVersion = 0
+def patchVersion = 1
 
 android {
     signingConfigs {
@@ -28,6 +28,7 @@ android {
         versionName "${majorVersion}.${minorVersion}.${patchVersion}"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         signingConfig signingConfigs.config
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -68,6 +69,7 @@ dependencies {
     compile 'jp.wasabeef:glide-transformations:2.0.2'
     compile 'com.google.firebase:firebase-messaging:10.2.6'
     compile 'myatminsoe.mdetect.android:mdetect-android:3.0'
+    compile 'com.android.support:multidex:1.0.0'
     compile 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
     compile 'com.mikhaellopez:circularimageview:3.0.2'
     compile 'com.googlecode.libphonenumber:libphonenumber:8.2.0'

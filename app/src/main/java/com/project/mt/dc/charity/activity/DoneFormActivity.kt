@@ -11,9 +11,8 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
+import android.view.View
+import android.widget.*
 import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
 import com.project.mt.dc.R
@@ -58,7 +57,8 @@ class DoneFormActivity : AppCompatActivity() {
     lateinit var string_dateError:String
     lateinit var string_descriptionError:String
     lateinit var string_date:String
-
+    lateinit var relative_upload: RelativeLayout
+    lateinit var linear_upload: LinearLayout
 
     override fun onResume() {
         super.onResume()
@@ -118,7 +118,8 @@ class DoneFormActivity : AppCompatActivity() {
         else{
             supportActionBar!!.title=Rabbit.uni2zg(title)
         }
-
+        relative_upload=findViewById(R.id.relative_upload)as RelativeLayout
+        linear_upload=findViewById(R.id.linear_upload)as LinearLayout
         txt_doneDate = findViewById(R.id.lab_doneDatepick) as MMTextView
         txt_doneLocation=findViewById(R.id.lab_donelocation)as MMEditText
         txt_donePlace = findViewById(R.id.txt_doneplace) as MMEditText
@@ -159,10 +160,10 @@ class DoneFormActivity : AppCompatActivity() {
             val i = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
             startActivityForResult(i, 666)
         })
-
-        Glide.with(this)
-                .load(R.drawable.img)
-                .into(img_doneImage)
+        relative_upload.setOnClickListener({
+            val i = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+            startActivityForResult(i, 666)
+        })
 
         firebaseReadService.getCharityDonorList(requestModel!!.charity_id!!, requestModel!!.request_id!!,"doneformdonorlist")
 
@@ -222,6 +223,7 @@ class DoneFormActivity : AppCompatActivity() {
             try {
 
                 myImageBitmap = MediaStore.Images.Media.getBitmap(this.contentResolver, mySelectedImage)
+                linear_upload.visibility= View.GONE
                 Glide.with(this).load(MethodUtil().bitmapToByte((myImageBitmap)!!))
                         .asBitmap()
                         .centerCrop().into(img_doneImage)

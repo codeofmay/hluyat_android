@@ -69,6 +69,8 @@ class DonorNavigationDrawerActivity : AppCompatActivity(), NavigationView.OnNavi
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_donor_navigation_drawer)
 
+
+
         val toolbar = findViewById(toolbar_edit) as Toolbar
         setSupportActionBar(toolbar)
         val drawer = findViewById(R.id.drawer_layout) as DrawerLayout

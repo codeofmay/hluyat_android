@@ -46,6 +46,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/white"
             android:textSize="@dimen/text_size_primarydescription"
+            android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceMedium"
             tools:text="27 July"
             />

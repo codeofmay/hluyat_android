@@ -25,6 +25,7 @@ class AboutFragment : Fragment() {
 
         MDetect.init(activity)
         card_licenses=view.findViewById(R.id.card_licenses)as CardView
+        val card_terms=view.findViewById(R.id.card_terms)as CardView
         card_licenses.setOnClickListener({
             val view = LayoutInflater.from(activity).inflate(R.layout.dialog_licenses, null) as WebView
             view.loadUrl("file:///android_asset/opensource_license.html")
@@ -34,29 +35,16 @@ class AboutFragment : Fragment() {
                     .setPositiveButton(android.R.string.ok, null)
                     .show()
         })
-/*
-
-        lab_about_donate=view.findViewById(R.id.lab_about_donate)as TextView
-        lab_about_search=view.findViewById(R.id.lab_about_search)as TextView
-        lab_about_noti=view.findViewById(R.id.lab_about_noti)as TextView
-        lab_about_finish=view.findViewById(R.id.lab_about_finish)as TextView
-
-
-        if(fontFlag!!){
-            lab_about_donate.text=getString(R.string.donor_about_donate)
-            lab_about_search.text=getString(R.string.donor_about_search)
-            lab_about_noti.text=getString(R.string.donor_about_noti)
-            lab_about_finish.text=getString(R.string.donor_about_finish)
-        }
-            else{
-
-            lab_about_donate.text=Rabbit.uni2zg(getString(R.string.donor_about_donate))
-            lab_about_search.text=Rabbit.uni2zg(getString(R.string.donor_about_search))
-            lab_about_noti.text=Rabbit.uni2zg(getString(R.string.donor_about_noti))
-            lab_about_finish.text=Rabbit.uni2zg(getString(R.string.donor_about_finish))
-        }
-*/
-        return view
+        card_terms.setOnClickListener({
+            val view = LayoutInflater.from(activity).inflate(R.layout.dialog_licenses, null) as WebView
+            view.loadUrl("file:///android_asset/terms_n_conditions.html")
+            AlertDialog.Builder(activity, R.style.MyDialogTheme)
+                    .setTitle("Terms And Conditions")
+                    .setView(view)
+                    .setPositiveButton(android.R.string.ok, null)
+                    .show()
+        })
+      return view
     }
 
 }// Required empty public constructor

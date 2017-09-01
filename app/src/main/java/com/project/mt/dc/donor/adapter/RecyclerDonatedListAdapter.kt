@@ -136,7 +136,7 @@ class RecyclerDonatedListAdapter(donatedList: ArrayList<RequestModel>, activity:
                         donatedModel.request_image=doneModel.request_image
                         donatedModel.request_date=doneModel.request_date
                         donatedModel.request_description=doneModel.request_description
-                        donatedModel.request_location=donatedModel.request_location
+                        donatedModel.request_location=doneModel.request_location
 
                         Glide.with(activity)
                                 .load(doneModel.request_image)
@@ -224,6 +224,7 @@ class RecyclerDonatedListAdapter(donatedList: ArrayList<RequestModel>, activity:
 
             linear_profileMore.setOnClickListener({
                 val donatedModel = donatedList[position]
+
                 val i = Intent(activity, MainDonationActivity::class.java)
                 i.putExtra("caller", "donated")
                 i.putExtra("donationmodel", donatedModel)

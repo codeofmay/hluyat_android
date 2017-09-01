@@ -98,17 +98,44 @@
 
             </LinearLayout>
 
+            <RelativeLayout
+                android:id="@+id/relative_upload"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_height="wrap_content">
             <com.github.siyamed.shapeimageview.RoundedImageView
                 android:id="@+id/img_itemimage"
                 android:layout_width="match_parent"
                 android:layout_height="185dp"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="32dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/img"
+                android:src="@drawable/blue_btn"
                 app:siRadius="6dp"
                 app:srcCompat="@drawable/img" />
+                <LinearLayout
+                    android:id="@+id/linear_upload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/ic_file_upload_blue_24dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_centerInParent="true"
+                        android:textStyle="bold"
+                        android:textColor="@color/blue"
+                        android:text="UPLOAD PHOTO"/>
+                </LinearLayout>
+
+            </RelativeLayout>
 
 
 

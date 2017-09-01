@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.Toolbar
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -96,13 +97,13 @@ class MainDonationActivity : AppCompatActivity() {
         recycler_mainDonation.layoutManager = LinearLayoutManager(this)
 
         donationModel = intent.getSerializableExtra("donationmodel") as RequestModel
+
         caller = intent.getStringExtra("caller")
 
         Glide.with(this)
                 .load(donationModel.request_image)
                 .into(img_donationImage)
         if(fontFlag!!) {
-            lab_donationName.text = donationModel.request_place
             lab_donationName.text = donationModel.request_place
             lab_donationDescription.text = donationModel.request_description
             lab_donationLocation.text = donationModel.request_location
@@ -111,6 +112,7 @@ class MainDonationActivity : AppCompatActivity() {
             lab_donationName.text = Rabbit.uni2zg(donationModel.request_place)
             lab_donationDescription.text = Rabbit.uni2zg(donationModel.request_description)
             lab_donationLocation.text = Rabbit.uni2zg(donationModel.request_location)
+
         }
 
         lab_charityName.typeface= fontUtil!!.title_font
